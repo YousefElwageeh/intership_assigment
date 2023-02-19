@@ -11,20 +11,41 @@ Brief description of the project
 - [Contributing](#contributing)
 - [License](#license)
 
+
 ## Design Pattern
+This project follows the MVVM (Model-View-ViewModel) design pattern.
 
-This project follows the principles of Clean Architecture, which separates the code into different layers, making it more modular, scalable, and testable. The layers used in this project are:
-
-- Presentation: contains the UI code and is responsible for displaying the data to the user.
-- Domain: contains the business logic and defines the use cases.
-- Data: contains the implementation of the interfaces defined in the domain layer and is responsible for fetching and storing data.
+## Clean Architecture
+This project follows the Clean Architecture approach with the following layers:
+- **Core**: Contains interfaces and classes that are used across the project, such as repositories, use cases, and entities.
+- **Config**: Contains configuration files for the project, such as theme, localization, and dependencies.
+- **Features**: Contains the application features, each with its own domain, data, and presentation layers.
 
 ## State Management
+This project uses the GetX package for state management, which provides a simple and powerful way to manage state, dependency injection, and navigation.
 
-The state management is handled by GetX, a lightweight library that provides a powerful yet simple way to manage the state of a Flutter application. It uses reactive programming to update the UI whenever the data changes, making it easy to keep the app in sync with the backend.
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-1. Clone the repository
+## Folder Structure
+This project has the following folder structure:
+- **lib**
+  - **core**: Contains interfaces and classes that are used across the project.
+    - **entities**: Contains the domain models.
+    - **repositories**: Contains the repository interfaces.
+    - **usecases**: Contains the use case interfaces.
+  - **config**: Contains configuration files for the project.
+    - **dependencies**: Contains the dependency injection files.
+    - **localization**: Contains the localization files.
+    - **routes**: Contains the routing configuration.
+    - **theme**: Contains the theme configuration.
+  - **features**: Contains the application features, each with its own domain, data, and presentation layers.
+    - **feature_name**
+      - **data**: Contains the implementation of the repository interfaces.
+        - **datasources**: Contains the data sources for the repository.
+        - **models**: Contains the data models.
+        - **repositories_impl**: Contains the implementation of the repository interface.
+      - **domain**: Contains the implementation of the use case interfaces.
+        - **entities**: Contains the domain models.
+        - **repositories**: Contains the repository interfaces.
+        - **usecases**: Contains the implementation of the use case interfaces.
+      - **presentation**: Contains the implementation of the UI.
+        - **pages**: Contains the feature pages.
+        - **widgets**: Contains the feature widgets.
