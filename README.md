@@ -1,24 +1,19 @@
-# Project Title
+# internship assignment
+
 
 Brief description of the project
 
 ## Table of Contents
 
-- [Design Pattern](#design-pattern)
+- [Design Pattern](#architectural pattern)
 - [State Management](#state-management)
-- [Getting Started](#getting-started)
 - [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
-
-## Design Pattern
-This project follows the MVVM (Model-View-ViewModel) design pattern.
 
 ## Clean Architecture
 This project follows the Clean Architecture approach with the following layers:
-- **Core**: Contains interfaces and classes that are used across the project, such as repositories, use cases, and entities.
-- **Config**: Contains configuration files for the project, such as theme, localization, and dependencies.
+- **data**: Contains interfaces and classes that are used across the project, such as repositories, use cases, and entities.
+- **domin**: Contains the implementation of the use case interfaces.
 - **Features**: Contains the application features, each with its own domain, data, and presentation layers.
 
 ## State Management
@@ -28,9 +23,8 @@ This project uses the GetX package for state management, which provides a simple
 This project has the following folder structure:
 - **lib**
   - **core**: Contains interfaces and classes that are used across the project.
-    - **entities**: Contains the domain models.
-    - **repositories**: Contains the repository interfaces.
-    - **usecases**: Contains the use case interfaces.
+    - **theme**: Contains the theme .
+    - **appstates**: Contains the app states such as loading state and sucess state.
   - **config**: Contains configuration files for the project.
     - **dependencies**: Contains the dependency injection files.
     - **localization**: Contains the localization files.
@@ -43,9 +37,8 @@ This project has the following folder structure:
         - **models**: Contains the data models.
         - **repositories_impl**: Contains the implementation of the repository interface.
       - **domain**: Contains the implementation of the use case interfaces.
-        - **entities**: Contains the domain models.
         - **repositories**: Contains the repository interfaces.
-        - **usecases**: Contains the implementation of the use case interfaces.
       - **presentation**: Contains the implementation of the UI.
+        - **ViewModel**: Contains the busniess logic.
         - **pages**: Contains the feature pages.
         - **widgets**: Contains the feature widgets.
