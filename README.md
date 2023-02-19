@@ -12,9 +12,11 @@ Brief description of the project
 
 ## Clean Architecture
 This project follows the Clean Architecture approach with the following layers:
-- **data**: Contains interfaces and classes that are used across the project, such as repositories, use cases, and entities.
-- **domin**: Contains the implementation of the use case interfaces.
-- **Features**: Contains the application features, each with its own domain, data, and presentation layers.
+- **data layer**: This layer is responsible for providing and persisting data. It contains repositories, data sources, and mappers that interact with external systems, such as databases, APIs, or file systems
+- 
+- **domin layer**:This layer represents the business logic of the application. It defines the entities, use cases, and interfaces that encapsulate the application's core functionality.
+- 
+- **Presentation layer**: This layer is responsible for handling user input and output. It consists of UI components, such as views and widgets, and their corresponding controllers, presenters, or view models.
 
 ## State Management
 This project uses the GetX package for state management, which provides a simple and powerful way to manage state, dependency injection, and navigation.
@@ -22,14 +24,12 @@ This project uses the GetX package for state management, which provides a simple
 ## Folder Structure
 This project has the following folder structure:
 - **lib**
+- **src**
   - **core**: Contains interfaces and classes that are used across the project.
-    - **theme**: Contains the theme .
     - **appstates**: Contains the app states such as loading state and sucess state.
   - **config**: Contains configuration files for the project.
-    - **dependencies**: Contains the dependency injection files.
-    - **localization**: Contains the localization files.
-    - **routes**: Contains the routing configuration.
-    - **theme**: Contains the theme configuration.
+    - **theme**: Contains the theme .
+    - **utils**: Contains the const values and strings ....
   - **features**: Contains the application features, each with its own domain, data, and presentation layers.
     - **feature_name**
       - **data**: Contains the implementation of the repository interfaces.
