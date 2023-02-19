@@ -5,7 +5,7 @@ Brief description of the project
 
 ## Table of Contents
 
-- [Design Pattern](#architectural pattern)
+- [Design Pattern](#architectural-pattern)
 - [State Management](#state-management)
 - [Folder Structure](#folder-structure)
 
