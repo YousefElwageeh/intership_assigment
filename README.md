@@ -12,7 +12,7 @@ Brief description of the project
 
 
 ## Backend
-Backend project made by firebase
+i am using firebase for this project
 
 ## Clean Architecture
 This project follows the Clean Architecture approach with the following layers:
