@@ -25,6 +25,7 @@ class LoginScreen extends StatelessWidget {
             child: Obx(
               () => Column(
                 children: [
+                  //sadfsadfsdfa
                   CommonWidgets.TextTitle(context,
                       title: AppStrings.Login,
                       SubTitle: AppStrings.loginDetails),
